@@ -1,0 +1,16 @@
+{% extends 'medical/base.html'%}
+{% block content %}
+<div class="col-md-6">
+    <div class="card mb-4 box-shadow">
+        <div class="card-body">
+            <p class="card-text"><h5 class="text-black">Врач: {{ object.doctor }}</h5>
+            <p class="card-text">Специализация: {{ object.doctor.specialization }}</p>
+            <p class="card-text">Дата: {{ object.date }}</p>
+            <p class="card-text">Время записи: {{ object.time}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <a class="btn btn-primary" href="{% url 'medical:appointments_list' %}" role="button">Назад</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'medical/base.html'%}
+{% block content %}
+<div class="col-md-6">
+    <div class="card mb-4 box-shadow">
+        <div class="card-body">
+            <p class="card-text"><h5 class="text-black">Название услуги: {{ object.service_name }}</h5>
+            <p class="card-text">Стоимость: {{ object.price }}</p>
+            <p class="card-text">Описание: {{ object.description }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <a class="btn btn-primary" href="{% url 'medical:services_list' %}" role="button">Назад</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
